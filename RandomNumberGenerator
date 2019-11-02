@@ -20,7 +20,7 @@ class MyFlutterApp extends StatelessWidget {
   }
 }
 -----------------------------------------------------------------------------------
-firstScreens.dart
+first_screens.dart
 import 'dart:math';
 
 import 'package:flutter/material.dart';
