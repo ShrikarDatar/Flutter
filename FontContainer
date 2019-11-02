@@ -1,0 +1,46 @@
+main.dart
+import 'package:flutter/material.dart';
+
+import 'app_screens/home.dart';
+
+void main(){
+runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: "Exploring UI widgets",
+    home: Home(),
+));
+}
+---------------------------------------------------------------------------------------
+home.dart
+import 'package:flutter/material.dart';
+
+class Home extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+
+    return Center(
+      child:Container(
+      alignment: Alignment.center,
+      color: Colors.yellow,
+
+        //  width: 200.0,
+        //  height: 100.0,
+        // margin: EdgeInsets.all(25.0),
+      child: Text("Mukhyamantri!",textDirection: TextDirection.ltr,
+        style: TextStyle(
+          decoration: TextDecoration.none,
+              fontSize: 55.0,
+              fontFamily: 'Roboto',
+              fontWeight: FontWeight.w900
+        ),
+      ),
+    )
+    );
+
+
+
+
+
+  }
+
+}
