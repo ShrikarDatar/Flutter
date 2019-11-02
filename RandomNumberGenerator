@@ -1,0 +1,47 @@
+#Main.dart
+import "package:flutter/material.dart";
+
+import 'app_screens/first_screens.dart';
+
+void main()=> runApp(MyFlutterApp());
+
+class MyFlutterApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "My Flutter App",
+        home: Scaffold(
+          appBar: AppBar(title: Text("Apla Flutter"),),
+          body: FirstScreen()
+        )
+    );
+  }
+}
+-----------------------------------------------------------------------------------
+firstScreens.dart
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+    class FirstScreen extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+        return  Material(
+    color: Colors.black,
+    child: Center(
+    child: Text(
+    generateLuckyNumber(),
+    textDirection: TextDirection.ltr,
+    style: TextStyle(color: Colors.white, fontSize: 40.0),
+          ),
+        ),
+      );
+
+    }
+    String generateLuckyNumber(){
+     var random= Random();
+     int luckyNumber=random.nextInt(10);
+     return "Your lucky number is $luckyNumber";
+    }
+  }
